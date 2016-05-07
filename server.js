@@ -21,8 +21,6 @@ app.use(bodyParser.json({
 app.use(express.static('app/data/friends'))
 
 // 
-// var friends = require('.app/data/friends.js');
-
 // =============================================================
 
 // Routes
@@ -40,11 +38,6 @@ app.get('/survey', function(req, res) {
 })
 
 app.get('/api/friends', function(req, res) {
-  console
-  // app.use(express.static('app/data'))
-  // for (var i = 0; i < friends.length; i++) {
-  //   res.json(friends[i]);
-
 
 })
 
