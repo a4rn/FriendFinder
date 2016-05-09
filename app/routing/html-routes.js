@@ -1,22 +1,30 @@
-// Dependencies
-// =============================================================
-var express = require('express');
+// ===============================================================================
+// DEPENDENCIES
+// We need to include the path package to get the correct file path for our html
+// ===============================================================================
 var path = require('path');
 
-// Sets up the Express App
-// =============================================================
-var app = express();
 
-// Routes
-// =============================================================
 
-// Basic route that sends the user first to the AJAX Page
-app.get('/', function(req, res) {
-  //res.send("Welcome to the Friend Finder Page!")
-  res.sendFile(path.join(__dirname + '/app/public/home.html'));
-})
+// ===============================================================================
+// ROUTING
+// ===============================================================================
 
-app.get('/survey', function(req, res) {
-  //res.send("sends Survey Page!")
-  res.sendFile(path.join(__dirname + '/app/public/survey.html'));
-})
+module.exports = function(app) {
+
+  // API GET Requests
+  // ---------------------------------------------------------------------------
+
+  // Basic route that sends the user first to the AJAX Page
+  app.get('/', function(req, res) {
+    //res.send("Welcome to the Friend Finder Page!")
+    res.sendFile(path.join(__dirname + '/../public/home.html'));
+  });
+
+
+  app.get('/survey', function(req, res) {
+    //res.send("sends Survey Page!")
+    res.sendFile(path.join(__dirname + '/../public/survey.html'));
+  });
+
+};
